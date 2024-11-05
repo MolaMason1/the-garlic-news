@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garlic News</title>
+    <style>
+        /* Embedded CSS Styles */
+        body {
+            font-family: Abril Fatface;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf7f0; /* Soft greenish background */
+            color: #333;
+        }
+
+        header {
+            background-color: #007b83; /* Dark teal */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        header .logo img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        #articles, #quiz, #other-stories {
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+        }
+
+        h2 {
+            color: #007b83;
+            font-weight: bold;
+            font-size: 1.8em; /* Increased heading size */
+        }
+
+        #other-stories h2 {
+            color: #007b83; /* Consistent color */
+        }
+
+        .story {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .story img {
+            width: 100px; /* Adjust width for story images */
+            height: auto;
+            margin-right: 15px; /* Space between image and text */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .story-title {
+            color: #007b83; /* Color for story titles */
+            font-size: 1.2em; /* Increased size for story titles */
+            text-decoration: none;
+        }
+
+        a {
+            color: #007b83;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #quiz-result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .headline-image {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .headline-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .headline-text {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Pop-up ad styles */
+        .popup-ad {
+            display: none;  /* Initially hidden */
+            position: fixed;
+            top: 20%;
+            right: 10px;
+            background-color: #ffcc00;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            font-size: 16px;
+        }
+
+        .popup-ad a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .popup-ad a:hover {
+            color: #007b83;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <div class="logo">
+        <img src="photos/garlic-logo.jpg" alt="The Garlic News"> <!-- Update the file name as needed -->
+    </div>
+    <h1>The Garlic News</h1>
+    <p>The World's Most Pungent News</p>
+</header>
+    
+    <main>
+        <section id="articles">
+            <h2>Today's Headline</h2>
+            <div class="headline-image">
+                <!-- Image with headline overlay -->
+                <a href="felinefentanylcrisis.html">
+                    <img src="photos/FelineFent1.jpg" alt="The Feline Fentanyl Crisis" class="headline-photo">
+                    <span class="headline-text">Richmond Alley Cat Population Found Trembling in the Streets After Drug Ring Dumps Stash in Local Sewer Drains</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="other-stories">
+            <h2>Other Stories</h2>
+            <div class="story">
+                <a href="woketreerevolution.html">
+                    <img src="photos/WokeTrees.jpg" alt="Virginia Republicans Warn Against Woke Tree Revolution" class="story-image">
+                </a>
+                <a href="woketreerevolution.html" class="story-title">Virginia Republicans Warn Against Harris’ “Woke Tree Revolution”</a>
+            </div>
+            <div class="story">
+                <a href="sleep4ballot.html">
+                    <img src="photos/VotingTent.jpg" alt="Elderly Voters Camp Overnight at Polls" class="story-image">
+                </a>
+                <a href="sleep4ballot.html" class="story-title">Elderly Voters Camp Overnight at Polls, Convinced Early Arrival Guarantees the Best Ballots</a>
+            </div>
+            <div class="story">
+                <a href="placeholder.html">
+                    <img src="photos/placeholder-image.jpg" alt="Coming Soon" class="story-image">
+                </a>
+                <a href="placeholder.html" class="story-title">[Placeholder for Upcoming Article]</a>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <h2>Garlic Trivia Quiz</h2>
+            <p>How well do you know garlic? Answer the questions below:</p>
+            
+            <!-- Question 1 -->
+            <div class="quiz-question">
+                <p>1. Which country produces the most garlic?</p>
+                <form id="quiz-form-1">
+                    <label><input type="radio" name="answer1" value="China"> China</label><br>
+                    <label><input type="radio" name="answer1" value="USA"> USA</label><br>
+                    <label><input type="radio" name="answer1" value="India"> India</label><br>
+                    <label><input type="radio" name="answer1" value="Spain"> Spain</label><br>
+                </form>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question">
+                <p>2. What is the garlic's main active compound that contributes to its flavor and health benefits?</p>
+                <form id="quiz-form-2">
+                    <label><input type="radio" name="answer2" value="Allicin"> Allicin</label><br>
+                    <label><input type="radio" name="answer2" value="Capsaicin"> Capsaicin</label><br>
+                    <label><input type="radio" name="answer2" value="Quercetin"> Quercetin</label><br>
+                    <label><input type="radio" name="answer2" value="Cinnamon"> Cinnamon</label><br>
+                </form>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question">
+                <p>3. Which part of the garlic plant is typically used in cooking?</p>
+                <form id="quiz-form-3">
+                    <label><input type="radio" name="answer3" value="Bulb"> Bulb</label><br>
+                    <label><input type="radio" name="answer3" value="Leaf"> Leaf</label><br>
+                    <label><input type="radio" name="answer3" value="Flower"> Flower</label><br>
+                    <label><input type="radio" name="answer3" value="Root"> Root</label><br>
+                </form>
+            </div>
+
+            <button type="button" onclick="checkAnswers()">Submit Answers</button>
+            <p id="quiz-result"></p>
+        </section>
+    </main>
+
+    <!-- Pop-up Ad -->
+    <div id="popup-ad" class="popup-ad">
+        <a href="popup-redirect.html" id="popup-link" target="_blank">Click me for a surprise!</a>
+    </div>
+
+    <script>
+        // Show the popup ad after 5 seconds
+        setTimeout(() => {
+            document.getElementById('popup-ad').style.display = 'block';
+        }, 5000);
+
+        // Close the popup ad if the link is clicked
+        document.getElementById('popup-link').addEventListener('click', () => {
+            document.getElementById('popup-ad').style.display = 'none';
+        });
+
+        function checkAnswers() {
+            const answers = {
+                answer1: "China",
+                answer2: "Allicin",
+                answer3: "Bulb"
+            };
+
+            let result = "Results:\n";
+            let score = 0;
+
+            // Check answer for Question 1
+            const answer1 = document.querySelector('input[name="answer1"]:checked');
+            if (answer1 && answer1.value === answers.answer1) {
+                score++;
+                result += "1. Correct!\n";
+            } else {
+                result += "1. Incorrect. The correct answer is " + answers.answer1 + ".\n";
+            }
+
+            // Check answer for Question 2
+            const answer2 = document.querySelector('input[name="answer2"]:checked');
+            if (answer2 && answer2.value === answers.answer2) {
+                score++;
+                result += "2. Correct!\n";
+            } else {
+                result += "2. Incorrect. The correct answer is " + answers.answer2 + ".\n";
+            }
+
+            // Check answer for Question 3
+            const answer3 = document.querySelector('input[name="answer3"]:checked');
+            if (answer3 && answer3.value === answers.answer3) {
+                score++;
+                result += "3. Correct!\n";
+            } else {
+                result += "3. Incorrect. The correct answer is " + answers.answer3 + ".\n";
+            }
+
+            result += "Your score: " + score + " out of 3.";
+            document.getElementById("quiz-result").textContent = result;
+        }
+    </script>
+</body>
+</html>
